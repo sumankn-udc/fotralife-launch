@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
+import { Link } from 'react-router-dom';
 import { trackEvent } from '../components/Analytics';
 
 const Shop = () => {
@@ -228,15 +229,16 @@ const Shop = () => {
 
                     {/* Quick Actions */}
                     <div className="product-overlay">
-                      <button 
+                      <Link 
+                        to={`/shop/${product.id}`}
                         className="quick-view-btn"
                         onClick={() => trackEvent('product_quick_view', {
                           product_name: product.name,
                           section: 'shop'
                         })}
                       >
-                        Quick View
-                      </button>
+                        View Details
+                      </Link>
                     </div>
                   </div>
 

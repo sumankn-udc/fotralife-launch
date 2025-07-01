@@ -1,24 +1,24 @@
 import React from 'react';
 
-const PageHeader = ({ title, subtitle, backgroundImage = null, children }) => {
+const PageHeader = ({ title, subtitle, children }) => {
   return (
-    <div className="page-header">
+    <section className="page-header">
       <div className="container">
-        <div className="page-header-content">
-          <div className="section-title">
-            <h1 className="wow fadeInUp" data-wow-delay=".2s">
-              {title}
-            </h1>
-            {subtitle && (
-              <h2 className="wow fadeInUp" data-wow-delay=".4s">
+        <div className="row">
+          <div className="col-xl-12">
+            <div className="page-header-content text-center">
+              <h1 className="text-white wow fadeInUp" data-wow-delay=".2s">
+                {title}
+              </h1>
+              <p className="text-white wow fadeInUp" data-wow-delay=".4s">
                 {subtitle}
-              </h2>
-            )}
+              </p>
+              {children}
+            </div>
           </div>
-          {children}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

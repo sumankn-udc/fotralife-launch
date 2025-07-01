@@ -152,7 +152,9 @@ const Events = () => {
               <div key={event.id} className="col-lg-6 col-xl-4">
                 <div className="event-card-detailed wow fadeInUp" data-wow-delay={`.${index % 3 + 2}s`}>
                   <div className="event-image">
-                    <img src={event.image} alt={event.title} />
+                    <Link to={`/events/${event.id}`}>
+                      <img src={event.image} alt={event.title} style={{ cursor: 'pointer' }} />
+                    </Link>
                     <div className="event-badges">
                       <span className={`difficulty-badge difficulty-${event.difficulty.toLowerCase()}`}>
                         {event.difficulty}
@@ -167,7 +169,9 @@ const Events = () => {
                   </div>
 
                   <div className="event-content">
-                    <h4>{event.title}</h4>
+                    <Link to={`/events/${event.id}`} style={{ textDecoration: 'none' }}>
+                      <h4 style={{ cursor: 'pointer' }}>{event.title}</h4>
+                    </Link>
                     <p className="event-description">{event.description}</p>
                     
                     <div className="event-details">
@@ -210,7 +214,8 @@ const Events = () => {
                       >
                         Register Now
                       </button>
-                      <button 
+                      <Link 
+                        to={`/events/${event.id}`}
                         className="btn-outline event-details-btn"
                         onClick={() => trackEvent('event_details_click', {
                           event_name: event.title,
@@ -218,7 +223,7 @@ const Events = () => {
                         })}
                       >
                         View Details
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
