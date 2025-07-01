@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Team from './components/Team';
 import Footer from './components/Footer';
 import Analytics from './components/Analytics';
+
+// Page components
+import Home from './pages/Home';
+import Events from './pages/Events';
+import Community from './pages/Community';
+import Shop from './pages/Shop';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   useEffect(() => {
@@ -14,27 +21,30 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      {/* Google Analytics */}
-      <Analytics />
-      
-      <main className="main-06">
-        {/* Header */}
-        <Header />
+    <Router>
+      <div className="App">
+        {/* Google Analytics */}
+        <Analytics />
         
-        {/* Main wrapper */}
-        <div className="main-wrapper demo-06">
-          {/* Hero Area */}
-          <Hero />
+        <main className="main-06">
+          {/* Header with Navigation */}
+          <Header />
           
-          {/* Team Area */}
-          <Team />
-        </div>
-        
-        {/* Footer */}
-        <Footer />
-      </main>
-    </div>
+          {/* Page Routes */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          
+          {/* Footer */}
+          <Footer />
+        </main>
+      </div>
+    </Router>
   );
 }
 
