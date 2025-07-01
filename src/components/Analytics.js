@@ -46,8 +46,6 @@ const Analytics = () => {
       page_title: 'Fotralife - Coming Soon',
       page_location: window.location.href,
     });
-
-    console.log('Google Analytics 4 initialized:', ANALYTICS_CONFIG.GA4_MEASUREMENT_ID);
   };
 
   const initializeGTM = () => {
@@ -62,7 +60,6 @@ const Analytics = () => {
     `;
     document.head.appendChild(script);
 
-    console.log('Google Tag Manager initialized:', ANALYTICS_CONFIG.GTM_ID);
   };
 
   // This component doesn't render anything
