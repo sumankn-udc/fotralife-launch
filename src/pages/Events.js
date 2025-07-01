@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PageHeader from '../components/PageHeader';
 import { trackEvent } from '../components/Analytics';
 
 const Events = () => {
@@ -16,7 +17,7 @@ const Events = () => {
       duration: "8 Days",
       spots: "12 spots left",
       type: "trek",
-      image: "assets/img/img-1.jpg",
+      image: "assets/img/himalayan-trek.jpg",
       description: "Experience the breathtaking beauty of Himalayas with this moderate trek suitable for beginners.",
       includes: ["Accommodation", "Meals", "Guide", "Transport"]
     },
@@ -30,7 +31,7 @@ const Events = () => {
       duration: "3 Days",
       spots: "8 spots left",
       type: "bike",
-      image: "assets/img/img-2.jpg",
+      image: "assets/img/coastal-biking.jpg",
       description: "Ride along the stunning Goa coastline with stops at beautiful beaches and local cafes.",
       includes: ["Bike Rental", "Accommodation", "Breakfast", "Guide"]
     },
@@ -44,7 +45,7 @@ const Events = () => {
       duration: "6 Days",
       spots: "5 spots left",
       type: "bike",
-      image: "assets/img/img-3.jpg",
+      image: "assets/img/mountain-biking.jpg",
       description: "Challenge yourself with high-altitude mountain biking in the stunning landscapes of Ladakh.",
       includes: ["Bike Rental", "Accommodation", "All Meals", "Guide", "Permits"]
     },
@@ -58,7 +59,7 @@ const Events = () => {
       duration: "3 Days",
       spots: "15 spots left",
       type: "trek",
-      image: "assets/img/img-1.jpg",
+      image: "assets/img/group-adventure.jpg",
       description: "Explore the lush green Western Ghats with waterfalls and scenic viewpoints.",
       includes: ["Accommodation", "Meals", "Guide", "First Aid"]
     },
@@ -72,7 +73,7 @@ const Events = () => {
       duration: "4 Days",
       spots: "10 spots left",
       type: "bike",
-      image: "assets/img/img-2.jpg",
+      image: "assets/img/desert-adventure.jpg",
       description: "Experience the magic of Rajasthan desert with camel rides and cultural experiences.",
       includes: ["Bike Rental", "Desert Camp", "Cultural Shows", "Guide"]
     },
@@ -86,7 +87,7 @@ const Events = () => {
       duration: "7 Days",
       spots: "6 spots left",
       type: "trek",
-      image: "assets/img/img-3.jpg",
+      image: "assets/img/himalayan-trek.jpg",
       description: "Witness the spectacular Valley of Flowers in full bloom during the best season.",
       includes: ["Accommodation", "All Meals", "Expert Guide", "Permits", "Medical Kit"]
     }
@@ -98,12 +99,12 @@ const Events = () => {
     { key: 'trek', label: 'Treks' }
   ];
 
-  const difficultyOptions = [
-    { key: 'all', label: 'All Levels' },
-    { key: 'easy', label: 'Easy' },
-    { key: 'moderate', label: 'Moderate' },
-    { key: 'hard', label: 'Hard' }
-  ];
+  // const difficultyOptions = [
+  //   { key: 'all', label: 'All Levels' },
+  //   { key: 'easy', label: 'Easy' },
+  //   { key: 'moderate', label: 'Moderate' },
+  //   { key: 'hard', label: 'Hard' }
+  // ];
 
   const filteredEvents = activeFilter === 'all' 
     ? events 
@@ -112,22 +113,10 @@ const Events = () => {
   return (
     <div className="main-wrapper demo-06">
       {/* Page Header */}
-      <section className="page-header">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="page-header-content text-center">
-                <h1 className="text-white wow fadeInUp" data-wow-delay=".2s">
-                  Adventure Events
-                </h1>
-                <p className="text-white wow fadeInUp" data-wow-delay=".4s">
-                  Discover thrilling bike rides and treks organized by our expert team
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader 
+        title="Adventure Events"
+        subtitle="Discover thrilling bike rides and treks organized by our expert team"
+      />
 
       {/* Events Filter & List */}
       <section className="events-listing">

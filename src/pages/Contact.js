@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageHeader from '../components/PageHeader';
 import { trackEvent } from '../components/Analytics';
 
 const Contact = () => {
@@ -80,22 +81,10 @@ const Contact = () => {
   return (
     <div className="main-wrapper demo-06">
       {/* Page Header */}
-      <section className="page-header">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="page-header-content text-center">
-                <h1 className="text-white wow fadeInUp" data-wow-delay=".2s">
-                  Get In Touch
-                </h1>
-                <p className="text-white wow fadeInUp" data-wow-delay=".4s">
-                  We're here to help with all your adventure needs
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader 
+        title="Get In Touch"
+        subtitle="We're here to help with all your adventure needs"
+      />
 
       {/* Contact Information */}
       <section className="contact-info">

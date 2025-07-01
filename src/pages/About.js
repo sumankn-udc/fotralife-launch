@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PageHeader from '../components/PageHeader';
 import { trackEvent } from '../components/Analytics';
 
 const About = () => {
@@ -7,33 +8,33 @@ const About = () => {
     {
       name: "Prathap",
       role: "Founder & Lead Guide",
-      image: "assets/img/img-1.jpg",
+      image: "assets/img/group-adventure.jpg",
       bio: "Adventure enthusiast with 10+ years of experience in organizing expeditions across India.",
       expertise: ["Himalayan Treks", "Leadership", "Safety Training"]
     },
     {
       name: "Suman KN", 
       role: "Business Manager",
-      image: "assets/img/img-2.jpg",
+      image: "assets/img/team-hiking.jpg",
       bio: "Passionate about building communities and ensuring seamless adventure experiences.",
       expertise: ["Community Building", "Operations", "Customer Relations"]
     },
     {
       name: "Karthik",
       role: "UX/UI Designer",
-      image: "assets/img/img-3.jpg", 
+      image: "assets/img/hero-background.jpg", 
       bio: "Creates beautiful digital experiences while being an avid mountain biker.",
       expertise: ["Digital Design", "Mountain Biking", "Photography"]
     }
   ];
 
   const achievements = [
-    { number: "500+", label: "Happy Adventurers", icon: "😊" },
+    { number: "100+", label: "Happy Adventurers", icon: "😊" },
     { number: "50+", label: "Successful Expeditions", icon: "🏔️" },
-    { number: "15+", label: "States Explored", icon: "🗺️" },
-    { number: "5000+", label: "Kilometers Covered", icon: "🚴‍♂️" },
+    { number: "10+", label: "States Explored", icon: "🗺️" },
+    { number: "10000+", label: "Kilometers Covered", icon: "🚴‍♂️" },
     { number: "5", label: "Years of Excellence", icon: "🏆" },
-    { number: "98%", label: "Safety Record", icon: "🛡️" }
+    { number: "99%", label: "Safety Record", icon: "🛡️" }
   ];
 
   const values = [
@@ -62,22 +63,10 @@ const About = () => {
   return (
     <div className="main-wrapper demo-06">
       {/* Page Header */}
-      <section className="page-header">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="page-header-content text-center">
-                <h1 className="text-white wow fadeInUp" data-wow-delay=".2s">
-                  About Fotralife
-                </h1>
-                <p className="text-white wow fadeInUp" data-wow-delay=".4s">
-                  Your trusted partner in adventure travel and exploration
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader 
+        title="About Fotralife"
+        subtitle="Your trusted partner in adventure travel and exploration"
+      />
 
       {/* Our Story */}
       <section className="our-story">
@@ -101,15 +90,15 @@ const About = () => {
                 </p>
                 <div className="story-highlights">
                   <div className="highlight-item">
-                    <span className="year">2019</span>
+                    <span className="year">2021</span>
                     <span className="milestone">Founded</span>
                   </div>
                   <div className="highlight-item">
-                    <span className="year">500+</span>
+                    <span className="year">100+</span>
                     <span className="milestone">Members</span>
                   </div>
                   <div className="highlight-item">
-                    <span className="year">50+</span>
+                    <span className="year">10+</span>
                     <span className="milestone">Adventures</span>
                   </div>
                 </div>
@@ -117,7 +106,7 @@ const About = () => {
             </div>
             <div className="col-lg-6">
               <div className="story-image wow fadeInRight" data-wow-delay=".4s">
-                <img src="assets/img/img-1.jpg" alt="Fotralife Adventure Group" />
+                <img src="assets/img/group-adventure.jpg" alt="Fotralife Adventure Group" />
               </div>
             </div>
           </div>

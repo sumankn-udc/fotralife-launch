@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageHeader from '../components/PageHeader';
 import { trackEvent } from '../components/Analytics';
 
 const Community = () => {
@@ -82,22 +83,10 @@ const Community = () => {
   return (
     <div className="main-wrapper demo-06">
       {/* Page Header */}
-      <section className="page-header">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="page-header-content text-center">
-                <h1 className="text-white wow fadeInUp" data-wow-delay=".2s">
-                  Join Our Community
-                </h1>
-                <p className="text-white wow fadeInUp" data-wow-delay=".4s">
-                  Connect with adventure enthusiasts and unlock exclusive benefits
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader 
+        title="Join Our Community"
+        subtitle="Connect with adventure enthusiasts and unlock exclusive benefits"
+      />
 
       {/* Community Features */}
       <section className="community-features">
@@ -292,19 +281,19 @@ const Community = () => {
             <div className="col-xl-12">
               <div className="stats-grid">
                 <div className="stat-item wow fadeInUp" data-wow-delay=".2s">
-                  <h3>500+</h3>
+                  <h3>100+</h3>
                   <p>Active Members</p>
                 </div>
                 <div className="stat-item wow fadeInUp" data-wow-delay=".3s">
-                  <h3>50+</h3>
+                  <h3>10+</h3>
                   <p>Events Completed</p>
                 </div>
                 <div className="stat-item wow fadeInUp" data-wow-delay=".4s">
-                  <h3>15+</h3>
+                  <h3>10+</h3>
                   <p>States Covered</p>
                 </div>
                 <div className="stat-item wow fadeInUp" data-wow-delay=".5s">
-                  <h3>5000+</h3>
+                  <h3>10000+</h3>
                   <p>KMs Traveled</p>
                 </div>
               </div>

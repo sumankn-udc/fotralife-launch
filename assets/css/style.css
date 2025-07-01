@@ -1016,14 +1016,14 @@ main.main-06 {
 
 main .header.header-06 {
   position: unset;
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 767px) {
   main .header.header-06 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Hero from '../components/Hero';
 import { trackEvent } from '../components/Analytics';
 
 const Home = () => {
@@ -34,10 +35,10 @@ const Home = () => {
   ];
 
   const communityStats = [
-    { number: "500+", label: "Active Members" },
-    { number: "50+", label: "Events Completed" },
-    { number: "15+", label: "States Covered" },
-    { number: "5000+", label: "KMs Traveled" }
+    { number: "100+", label: "Active Members" },
+    { number: "10+", label: "Events Completed" },
+    { number: "10+", label: "States Covered" },
+    { number: "10000+", label: "KMs Traveled" }
   ];
 
   const featuredProducts = [
@@ -45,21 +46,21 @@ const Home = () => {
       id: 1,
       name: "Fotralife Adventure Backpack",
       price: "₹2,999",
-      image: "assets/img/img-1.jpg",
+      image: "assets/img/adventure-backpack.jpg",
       rating: 4.8
     },
     {
       id: 2,
       name: "Official Fotralife Jersey",
       price: "₹899",
-      image: "assets/img/img-2.jpg",
+      image: "assets/img/cycling-gear.jpg",
       rating: 4.9
     },
     {
       id: 3,
       name: "Trek Essentials Kit",
       price: "₹1,599",
-      image: "assets/img/img-3.jpg",
+      image: "assets/img/himalayan-trek.jpg",
       rating: 4.7
     }
   ];
@@ -67,50 +68,13 @@ const Home = () => {
   return (
     <div className="main-wrapper demo-06">
       {/* Hero Section */}
-      <section className="hero-area">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-6 col-lg-6">
-              <div className="heading">
-                <h1 className="text-white wow fadeInUp" data-wow-delay=".2s">
-                  Adventure Awaits <br /> Join the Journey
-                </h1>
-                <p className="wow fadeInUp" data-wow-delay=".4s">
-                  Connect with fellow adventurers, explore breathtaking destinations, 
-                  and create unforgettable memories through our organized bike rides and treks.
-                </p>
-                <div className="hero-buttons wow fadeInUp" data-wow-delay=".6s">
-                  <Link 
-                    to="/events" 
-                    className="common-btn"
-                    onClick={() => trackEvent('cta_click', {
-                      button: 'explore_events',
-                      section: 'hero'
-                    })}
-                  >
-                    Explore Events
-                  </Link>
-                  <Link 
-                    to="/community" 
-                    className="common-btn btn-outline"
-                    onClick={() => trackEvent('cta_click', {
-                      button: 'join_community',
-                      section: 'hero'
-                    })}
-                  >
-                    Join Community
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="hero-image wow fadeInRight" data-wow-delay=".4s">
-                <img src="assets/img/img-1.jpg" alt="Adventure Travel Community" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero 
+        title="Adventure Awaits - Join the Journey"
+        subtitle="Connect with fellow adventurers, explore breathtaking destinations, and create unforgettable memories through our organized bike rides and treks."
+        showCountdown={false}
+        showButtons={true}
+        backgroundImage="assets/img/hero-background.jpg"
+      />
 
       {/* Community Stats */}
       <section className="stats-section">

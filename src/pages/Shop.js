@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageHeader from '../components/PageHeader';
 import { trackEvent } from '../components/Analytics';
 
 const Shop = () => {
@@ -20,7 +21,7 @@ const Shop = () => {
       price: 2999,
       originalPrice: 3499,
       category: "trekking",
-      image: "assets/img/img-1.jpg",
+      image: "assets/img/adventure-backpack.jpg",
       rating: 4.8,
       reviews: 124,
       description: "Durable 50L backpack perfect for multi-day treks with rain cover included.",
@@ -34,7 +35,7 @@ const Shop = () => {
       price: 899,
       originalPrice: 1199,
       category: "merchandise",
-      image: "assets/img/img-2.jpg",
+      image: "assets/img/cycling-gear.jpg",
       rating: 4.9,
       reviews: 89,
       description: "Premium quality moisture-wicking jersey with Fotralife branding.",
@@ -48,7 +49,7 @@ const Shop = () => {
       price: 1599,
       originalPrice: 1999,
       category: "trekking",
-      image: "assets/img/img-3.jpg",
+      image: "assets/img/himalayan-trek.jpg",
       rating: 4.7,
       reviews: 156,
       description: "Complete trekking essentials including first aid, survival tools, and more.",
@@ -62,7 +63,7 @@ const Shop = () => {
       price: 1299,
       originalPrice: 1599,
       category: "biking",
-      image: "assets/img/img-1.jpg",
+      image: "assets/img/bike-helmet.jpg",
       rating: 4.6,
       reviews: 78,
       description: "Lightweight, aerodynamic helmet with superior ventilation and safety features.",
@@ -76,7 +77,7 @@ const Shop = () => {
       price: 399,
       originalPrice: 499,
       category: "merchandise",
-      image: "assets/img/img-2.jpg",
+      image: "assets/img/cycling-gear.jpg",
       rating: 4.5,
       reviews: 203,
       description: "Insulated stainless steel water bottle keeps drinks cold for 24hrs.",
@@ -90,7 +91,7 @@ const Shop = () => {
       price: 699,
       originalPrice: 899,
       category: "biking",
-      image: "assets/img/img-3.jpg",
+      image: "assets/img/mountain-biking.jpg",
       rating: 4.4,
       reviews: 67,
       description: "Padded cycling gloves with excellent grip and comfort for long rides.",
@@ -104,7 +105,7 @@ const Shop = () => {
       price: 1899,
       originalPrice: 2299,
       category: "trekking",
-      image: "assets/img/img-1.jpg",
+      image: "assets/img/group-adventure.jpg",
       rating: 4.7,
       reviews: 134,
       description: "Lightweight aluminum trekking poles with shock absorption technology.",
@@ -118,7 +119,7 @@ const Shop = () => {
       price: 799,
       originalPrice: 999,
       category: "accessories",
-      image: "assets/img/img-2.jpg",
+      image: "assets/img/mountain-biking.jpg",
       rating: 4.3,
       reviews: 45,
       description: "Universal phone mount for bikes with 360° rotation and secure grip.",
@@ -132,7 +133,7 @@ const Shop = () => {
       price: 499,
       originalPrice: 699,
       category: "merchandise",
-      image: "assets/img/img-3.jpg",
+      image: "assets/img/desert-adventure.jpg",
       rating: 4.6,
       reviews: 91,
       description: "Adjustable cap with UV protection and moisture-wicking sweatband.",
@@ -163,27 +164,16 @@ const Shop = () => {
   return (
     <div className="main-wrapper demo-06">
       {/* Page Header */}
-      <section className="page-header">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="page-header-content text-center">
-                <h1 className="text-white wow fadeInUp" data-wow-delay=".2s">
-                  Adventure Gear Shop
-                </h1>
-                <p className="text-white wow fadeInUp" data-wow-delay=".4s">
-                  Premium quality gear for your next adventure
-                </p>
-                {cart.length > 0 && (
-                  <div className="cart-indicator wow fadeInUp" data-wow-delay=".6s">
-                    <span className="cart-count">🛒 {cart.length} items in cart</span>
-                  </div>
-                )}
-              </div>
-            </div>
+      <PageHeader 
+        title="Adventure Gear Shop"
+        subtitle="Premium quality gear for your next adventure"
+      >
+        {cart.length > 0 && (
+          <div className="cart-indicator wow fadeInUp" data-wow-delay=".6s">
+            <span className="cart-count">🛒 {cart.length} items in cart</span>
           </div>
-        </div>
-      </section>
+        )}
+      </PageHeader>
 
       {/* Shop Categories & Products */}
       <section className="shop-section">
