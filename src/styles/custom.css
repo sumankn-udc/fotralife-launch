@@ -90,6 +90,10 @@ p {
 }
 
 /* Team card styling */
+.team-content {
+  padding-top: 60px;
+}
+
 .team-role {
   color: #667eea !important;
 }

@@ -6,25 +6,39 @@ import { trackEvent } from '../components/Analytics';
 const About = () => {
   const teamMembers = [
     {
-      name: "Prathap",
-      role: "Founder & Lead Guide",
-      image: "assets/img/group-adventure.jpg",
-      bio: "Adventure enthusiast with 10+ years of experience in organizing expeditions across India.",
-      expertise: ["Himalayan Treks", "Leadership", "Safety Training"]
+      name: "Abhiste Shobite Prasanakshi",
+      role: "Founder",
+      image: "assets/img/abhiste-founder.jpg",
+      bio: "Passionate founder with diverse interests in food blogging, traveling, and artistic expression. Brings creativity and vision to every Fotralife adventure.",
+      expertise: ["Food Blogging", "Travel Photography", "Artistic Direction", "Creative Leadership"]
     },
     {
       name: "Suman KN", 
-      role: "Business Manager",
-      image: "assets/img/team-hiking.jpg",
-      bio: "Passionate about building communities and ensuring seamless adventure experiences.",
-      expertise: ["Community Building", "Operations", "Customer Relations"]
+      role: "Co-Founder / Business Operations",
+      image: "assets/img/suman-cofounder.jpg",
+      bio: "Leading biking and trek events while managing community operations. Ensures every adventure runs smoothly and safely.",
+      expertise: ["Event Leadership", "Biking Expeditions", "Trek Management", "Operations", "Adventure Photography"]
+    },
+    {
+      name: "Prathapa",
+      role: "Lead Guide",
+      image: "assets/img/prathapa-guide.jpg", 
+      bio: "Expert guide for biking and trekking adventures, also a passionate content creator sharing the beauty of outdoor experiences.",
+      expertise: ["Biking Expeditions", "Trekking Guides", "Content Creation", "Adventure Photography"]
+    },
+    {
+      name: "Yashwanth",
+      role: "Event Manager / Lead Guide",
+      image: "assets/img/yashwanth-manager.jpg",
+      bio: "Specializes in biking adventures and event management, with a passion for discovering and exploring hidden gems across India.",
+      expertise: ["Event Management", "Hidden Destinations", "Biking Adventures", "Route Discovery"]
     },
     {
       name: "Karthik",
-      role: "UX/UI Designer",
-      image: "assets/img/hero-background.jpg", 
-      bio: "Creates beautiful digital experiences while being an avid mountain biker.",
-      expertise: ["Digital Design", "Mountain Biking", "Photography"]
+      role: "UI/UX Designer / Lead Guide",
+      image: "assets/img/karthik-designer.jpg", 
+      bio: "Combines technical expertise in design and coding with adventure leadership for biking and trekking expeditions.",
+      expertise: ["UI/UX Design", "Coding", "Biking Guide", "Technical Leadership"]
     }
   ];
 
